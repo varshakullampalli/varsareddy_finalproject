@@ -1,0 +1,67 @@
+<%- include('../partials/header.ejs')%>
+
+<div class="content">
+  <% if(ownConnection.connectionWith) { %>
+  <div>
+    <table>
+      <tr>
+        <th><h3><%= ownConnection.name%></h3></th>
+        <th><h3><%= othersConnection.name %></h3></th>
+      </tr>
+      <tr>
+        <td>
+          <div class="event-image-div"><img class="mlr-50 event-image" src="<%= ownConnection.image %>" alt="Logo" /></div>
+        </td>
+        <td>
+          <div class="event-image-div">
+            <img class="mlr-50 event-image" src="<%= othersConnection.image %>" alt="Logo" />
+          </div>
+        </td>
+        <td>
+          <form>
+            <button
+              class="button update-btn"
+              type="submit"
+              formaction="/users/connection/offer/accept/<%= othersConnection._id %>&<%= ownConnection._id %>?_method=PUT"
+              formmethod="post">
+              Accept
+            </button>
+            <button
+              class="button update-btn"
+              type="submit"
+              formaction="/users/connection/offer/cancel/<%= othersConnection._id %>&<%= ownConnection._id %>?_method=PUT"
+              formmethod="post">
+              Reject
+            </button>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <% } else{ %>
+  <div>
+    <table>
+      <tr>
+        <th><h3><%= ownConnection.name%></h3></th>
+        <th><h3><%= othersConnection.name %></h3></th>
+      </tr>
+      <tr>
+        <td>
+          <div class="event-image-div"><img class="mlr-50 event-image" src="<%= ownConnection.image %>" alt="Logo" /></div>
+        </td>
+        <td>
+          <div class="event-image-div">
+            <img class="mlr-50 event-image" src="<%= othersConnection.image %>" alt="Logo" />
+          </div>
+        </td>
+        <td>
+          <form action="/users/connection/offer/cancel/<%= othersConnection._id %>&<%= ownConnection._id %>?_method=PUT" method="POST">
+              <button class="button cancel-btn" type="submit">Cancel Offer</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <% } %>
+</div>
+<%- include('../partials/footer.ejs')%>

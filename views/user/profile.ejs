@@ -1,0 +1,95 @@
+
+<%- include('../partials/header.ejs')%>
+<div class="content">
+    <div class="center-container mb-100">
+        <div class="event-heading">
+            <h3 class="dis-in-bl"><%=user.firstName%>'s Connections</h3>
+        </div>
+        <% if(connections.length){ %>
+        <table>
+            <tr>
+              <th>Connection</th>
+              <th>Topic</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <% connections.forEach(connection => { %>
+            <tr>
+                <td><%= connection.name %></td>
+                <td><%= connection.topic %></td>
+                <td><%= connection.status %></td>
+                <td>
+                    <form style="float: left;">
+                        <button class="button update-btn" type="submit" formmethod="GET" formaction="/connections/<%= connection._id %>/edit">Edit</button>
+                        <button class="button delete-btn" type="submit" formmethod="POST" formaction="/connections/<%= connection._id %>?_method=DELETE">Delete</button>
+                        <% if(connection.status == 'Offer Pending' && connection.connectionWith) { %>
+                            <button class="button manage-btn" type="submit" formmethod="GET" formaction="/users/connection/ownoffer/<%= connection._id %>">Manage Offer</button>
+                        <% } else if (connection.status == 'Offer Pending') {%>
+                            <button class="button manage-btn" type="submit" formmethod="GET" formaction="/users/connection/offer/<%= connection._id %>">Manage Offer</button>
+                        <% } %>
+                    </form>
+                </td>
+            </tr>
+            <% }); %>
+        </table>
+        <% } else { %>
+            <p style="margin: 20px auto;width: 95%;">There are no connections to display.</p>
+        <% } %>
+        <div class="event-heading" style="margin-top: 50px;">
+            <h3 class="dis-in-bl"><%=user.firstName%>'s watchList</h3>
+        </div> 
+        <% if(watchLists.length){ %>
+            <table>
+                <tr>
+                    <th>Connection</th>
+                    <th>Topic</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <% watchLists.forEach(watchList => { %>
+                <tr>
+                    <td><%= watchList.connection.name %></td>
+                    <td><%= watchList.connection.topic %></td>
+                    <td><%= watchList.connection.status %></td>
+                    <td>
+                        <form style="float: left;">
+                            <button class="button submit-btn" type="submit" formmethod="POST" formaction="/connections/watch/<%= watchList.connection._id %>?_method=DELETE">Unwatch</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+            <% } else { %>
+                <p style="margin: 20px auto;width: 95%;">There are no watchList to display.</p>
+            <% } %>
+    
+            <div class="event-heading" style="margin-top: 50px;">
+                <h3 class="dis-in-bl"><%=user.firstName%>'s offerList</h3>
+            </div> 
+            <% if(myOffers.length){ %>
+            <table>
+                <tr>
+                    <th>Connection</th>
+                    <th>Topic</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <% myOffers.forEach(offer => { %>
+                <tr>
+                    <td><%= offer.name %></td>
+                    <td><%= offer.topic %></td>
+                    <td><%= offer.status %></td>
+                    <td>
+                        <form style="float: left;">
+                            <button class="button delete-btn" type="submit" formmethod="POST" formaction="/users/connection/offer/cancel/<%= offer.connectionWith %>&<%= offer._id %>?_method=PUT">Cancel Offer</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+            <% } else { %>
+                <p style="margin: 20px auto;width: 95%;">There are no offers to display.</p>
+            <% } %>
+        </div>
+</div>
+<%- include('../partials/footer.ejs')%>

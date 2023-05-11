@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs') %>
+<div class="content">
+    <div class="center-container">
+        <form style="width: 100%;">
+            <div class="event-heading">
+                <h3 class="dis-in-bl"><%= connection.name %></h3>
+                <% if(user == connection.host._id) { %>
+                    <div class="float-right">
+                        <button class="button update-btn" type="submit" formmethod="GET" formaction="/connections/<%= connection._id %>/edit">Edit</button>
+                        <button class="button delete-btn" type="submit" formmethod="POST" formaction="/connections/<%= connection._id %>?_method=DELETE">Delete</button>
+                    </div>
+                    <% } else {%>
+                        <div class="float-right">
+                            <button class="button update-btn" type="submit" formmethod="POST" formaction="/users/connections/<%= connection._id %>">Trade</button>
+                            <button class="button watch-btn" type="submit" formmethod="POST" formaction="/connections/<%= connection._id %>/watch">Watch</button>
+                        </div>
+                <% } %>
+            </div>
+        </form>
+        <div class="wrapper">
+            <div class="event-image-div"><img class="mlr-50 event-image" src="<%= connection.image %>" alt="Logo"></div>
+            <div class="detail">
+                <h4>Posted by <%= connection.host.firstName +' '+ connection.host.lastName %></h4>
+                <p><%= connection.date %></p>
+                <p><%= connection.startTime %> - <%= connection.endTime %></p>
+                <p><%= connection.location %></p>
+            </div>
+        </div>
+        <div class="description">
+            <h3>Details</h3>
+            <p><%= connection.details %></p> 
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

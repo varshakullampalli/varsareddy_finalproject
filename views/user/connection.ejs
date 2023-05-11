@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs')%>
+<div class="content">
+  <div class="center-container mb-100">
+    <h1>Your items available to connection :</h1>
+    <p>Number of connections: <%= connections.length %></p>
+
+    <% if(connections.length){ %>
+  
+    <form action="/connections/connection/<%= itemToConnection.id%>?_method=PUT" method="POST">
+      <table class="table">
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Topic</th>
+          <th>Status</th>
+        </tr>
+
+        <% connections.forEach(connection => { %>
+        <label class="textfont1">
+          <tr>
+            <td><input type="radio" id="<%= connection._id %>" name="connection" value="<%= connection._id %>" /></td>
+            <td><%= connection.name %></td>
+            <td><%= connection.topic %></td>
+            <td><%= connection.status %></td>
+          </tr>
+        </label>
+
+        <% }); %>
+        <button class="button submit-btn">Trade</button>
+      </table>
+    </form>
+    <% } else { %>
+    <p>There are no items to display.</p>
+    <% } %>
+  </div>
+</div>
+<%- include('../partials/footer.ejs')%>

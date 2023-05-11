@@ -1,0 +1,52 @@
+[{
+    "_id": {
+      "$oid": "645c2e3b4c36966676647c3a"
+    },
+    "name": "aru ura",
+    "topic": "My Meeting bcis",
+    "details": "kjfbgkhgfkhfkh",
+    "location": "Charlotte",
+    "date": "2023-05-18",
+    "startTime": "19:55",
+    "endTime": "19:57",
+    "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMQEA4PEBAQEA8QDQ4PDRAPEA8QDw8RFxEXFhYRFxUYHSggGBomHRcVITEhJikrLi4uGR82OD8sNygtLisBCgoKDg0OGhAQGislGCUyMDItLSsrLS0tLS0tLSstLS0rLy8rLSstLS0tKzUvLS0rLS0tLS0tLS0tLS0tKy0rLf/AABEIAKIBOAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECAwUGCAT/xABOEAACAgEBAwcGBwoMBwEAAAAAAQIDBBEFBxIGEyExUXGBFCJBYZGxMlJykqHB0TRic3SCk6Kjs/AVIyUzQkRUZLLD4fEkNUNjpLTCFv/EABgBAQEBAQEAAAAAAAAAAAAAAAACAwEE/8QAIREBAAICAgIDAQEAAAAAAAAAAAECAxEhMhITBDFRYUH/2gAMAwEAAhEDEQA/AJxAAAAAAAAAAAAAAAAAAAAAAYp5MI/CnCPfKKPnntjHj15NC77q19Y2afaDWy5QYi68vG/P1faWPlJh/wBsxvz1f2nNw7qW1Bqv/wBLh/2zG/PV/aXLlDif2vG/PV/aNwalswa+O3cV9WVjPuvq+0zV7Rpl8G6qXdZB/Wd2afUC2FifU0+5plwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxZORCuMp2TjXCK1lOclGMV2tvoRlIj3012K/GnKUljOrhgnqqlcpPi6epSacevrSenUzlp1G1Vjc6dXtLeXgU6qE7MiS9FEHw/Plon4NnO5e9uT1VOJFdkrbdf0Yr6yMuAyQ0MJyWbxjq7O/eZnT+C6K/wdTf+OTPgu5aZ8+vKsXyI1w/wpHPqUfX7S9WL4vvZE2t+ritWwt23lT+FlZL78i3T2anzTnKfw5OfynKfvMXPepL2Fytb/wBNWTyrUL40fvokXcC9PvMab/fQr0dv0nHWRxiv9inR6EWc4u0c72agZODX1FOBd",
+    "host": {
+      "$oid": "645c2e004c36966676647c28"
+    },
+    "status": "Offer Pending",
+    "createdAt": {
+      "$date": "2023-05-10T23:52:27.597Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-10T23:59:22.112Z"
+    },
+    "__v": 0,
+    "connectionWith": {
+      "$oid": "645c2fd14c36966676647c8a"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "645c2fd14c36966676647c8a"
+    },
+    "name": "top",
+    "topic": "dress",
+    "details": "sakgfkuagefukgeugf",
+    "location": "Charlotte",
+    "date": "2023-05-19",
+    "startTime": "19:02",
+    "endTime": "19:03",
+    "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMQEA4PEBAQEA8QDQ4PDRAPEA8QDw8RFxEXFhYRFxUYHSggGBomHRcVITEhJikrLi4uGR82OD8sNygtLisBCgoKDg0OGhAQGislGCUyMDItLSsrLS0tLS0tLSstLS0rLy8rLSstLS0tKzUvLS0rLS0tLS0tLS0tLS0tKy0rLf/AABEIAKIBOAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECAwUGCAT/xABOEAACAgEBAwcGBwoMBwEAAAAAAQIDBBEFBxIGEyExUXGBFCJBYZGxMlJykqHB0TRic3SCk6Kjs/AVIyUzQkRUZLLD4fEkNUNjpLTCFv/EABgBAQEBAQEAAAAAAAAAAAAAAAACAwEE/8QAIREBAAICAgIDAQEAAAAAAAAAAAECAxEhMhITBDFRYUH/2gAMAwEAAhEDEQA/AJxAAAAAAAAAAAAAAAAAAAAAAYp5MI/CnCPfKKPnntjHj15NC77q19Y2afaDWy5QYi68vG/P1faWPlJh/wBsxvz1f2nNw7qW1Bqv/wBLh/2zG/PV/aXLlDif2vG/PV/aNwalswa+O3cV9WVjPuvq+0zV7Rpl8G6qXdZB/Wd2afUC2FifU0+5plwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxZORCuMp2TjXCK1lOclGMV2tvoRlIj3012K/GnKUljOrhgnqqlcpPi6epSacevrSenUzlp1G1Vjc6dXtLeXgU6qE7MiS9FEHw/Plon4NnO5e9uT1VOJFdkrbdf0Yr6yMuAyQ0MJyWbxjq7O/eZnT+C6K/wdTf+OTPgu5aZ8+vKsXyI1w/wpHPqUfX7S9WL4vvZE2t+ritWwt23lT+FlZL78i3T2anzTnKfw5OfynKfvMXPepL2Fytb/wBNWTyrUL40fvokXcC9PvMab/fQr0dv0nHWRxiv9inR6EWc4u0c72agZODX1FOBd",
+    "host": {
+      "$oid": "645c2e7c4c36966676647c53"
+    },
+    "status": "Offer Pending",
+    "createdAt": {
+      "$date": "2023-05-10T23:59:13.275Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-10T23:59:22.112Z"
+    },
+    "__v": 0
+  }
+]
